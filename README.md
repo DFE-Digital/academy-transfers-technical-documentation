@@ -1,15 +1,8 @@
 # Technical Documentation
 
-This project uses the [Tech Docs Template][template], which is a [Middleman template][mmt] that you can use to build technical documentation using a GOV.UK style.
+This project uses the [Tech Docs Template][template], which is a [Middleman template][mmt] that enables us to build technical documentation using a GOV.UK style.
 
-You’re welcome to use the template even if your service isn’t considered part of GOV.UK, but your site or service must not:
-
-- identify itself as being part of GOV.UK
-- use the crown or GOV.UK logotype in the header
-- use the GDS Transport typeface
-- suggest that it’s an official UK government website if it’s not
-
-👉 To find out more about setting up and managing content for a website using this template, see the [Tech Docs Template documentation][tdt-docs].
+👉 To find out more about setting up and managing content for this website, see the [Tech Docs Template documentation][tdt-docs].
 
 ## Before you start
 
@@ -20,7 +13,7 @@ To use the Tech Docs Template you need:
 
 ## Making changes
 
-To make changes to the documentation for the Tech Docs Template website, edit files in the `source` folder of this repository.
+To make changes to the documentation for this website, edit files in the `source` folder of this repository.
 
 You can add content by editing the `.html.md.erb` files. These files support content in:
 
@@ -29,8 +22,6 @@ You can add content by editing the `.html.md.erb` files. These files support con
 - Ruby
 
 👉 You can use Markdown and HTML to [generate different content types][example-content] and [Ruby partials to manage content][partials].
-
-👉 Learn more about [producing more complex page structures][multipage] for your website.
 
 ## Preview your changes locally
 
