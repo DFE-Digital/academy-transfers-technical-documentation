@@ -1,21 +1,9 @@
-# Hello, World!
+# About
 
-## Edit Me!
+This is the Technical Documentation supporting the Beta phase of the Academy Transfer Service.
 
-Open `source/documentation/index.md` in your favourite text editor and start editing!
+It utilises the [Tech Docs Template] in the [GitHub Tech Docs Code].
 
-You can write content in [Markdown](https://daringfireball.net/projects/markdown/) using **all** of the _usual_ syntax that you're used to!
+The Service Team have decided to the [C4 Model] to visualise the architecture for the service.
 
-This means you can use things like tables:
-
-Food | Kind | Tasty?
---- | --- | ---
-Bananas | Fruit | Yes
-Aubergines | Vegetable | No
-Apricots | Fruit | Yes
-
-To change the title of the page or include additional files you'll need to edit `source/index.html.md.erb`.
-
-If you want slightly more control, you can always use <strong>HTML</strong>.
-
-For more detail and troubleshooting, take a look at the `README.md` file in the root of this project.
+Architecture Decision Records (ADRs) as described in this [ADR Blog Post] are also used to record key decisions.
