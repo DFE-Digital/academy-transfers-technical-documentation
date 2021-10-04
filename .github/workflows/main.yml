@@ -5,7 +5,7 @@ name: Deploy Middleman to GOVUK PaaS
 on:
   push:
     branches:
-      - "main"
+      - "master"
       
   # Allows us to run this workflow manually from the Actions tab
   workflow_dispatch:
