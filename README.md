@@ -11,7 +11,7 @@ To use the Tech Docs Template you need:
 - [Ruby][install-ruby]
 - [Middleman][install-middleman]
 
-## Making changes
+## Making changes to the copy
 
 To make changes to the documentation for this website, edit files in the `source` folder of this repository.
 
@@ -22,6 +22,10 @@ You can add content by editing the `.html.md.erb` files. These files support con
 - Ruby
 
 👉  You can use Markdown and HTML to [generate different content types][example-content] and [Ruby partials to manage content][partials].
+
+## Making changes to the C4 diagrams
+
+See: [README.md](./source-c4-diagrams/README.md).
 
 ## Preview your changes locally
 
