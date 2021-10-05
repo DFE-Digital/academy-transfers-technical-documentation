@@ -1,25 +1,21 @@
 ---
-title: Context
-weight: 10
+title: Containers
+weight: 20
 parent: /architecture
-last_reviewed_on: 2021-01-07
+last_reviewed_on: 2021-5-10
 review_in: 3 months
 ---
 
-# Context
+# Containers
 
-These context diagrams are a good starting point, allowing visualisation of the big picture.
+Once the fit of the system in the overall landscape is understood it useful to zoom in to the system boundary.
 
-The highest level, the System Landscape Diagram, focusses on people (actors, roles, personas, etc) and software systems rather than technologies, protocols and other low-level details.
+![Containers](images/Containers.png)
 
-![System Landscape](images/SystemLandscape.png)
+This diagram shows how the Academy Transfers service does not store any data on the projects being worked up - this responsibility is delegated to the Academies API, which is managed by a separate team.
 
-* The Regional Schools Commissioner initiates the transfer, but it is the Project Lead who uses the Academy Transfers system to progress the transfer.
-* An Academy moves from the Source Trust to the Target Trust.
-* The Developer uses their Local Development Environment to push code to GitHub, which then automatically tests and deploys it when appropriate.
+The Academy Transfers service is hosted in GovPaaS, whereas the Academies API is in Azure CIP.
 
-Whilst the System Context zooms in a little, showing just the users who interact directly with the system and the system itself - the Developers and Project Leads.
-
-![System Context](images/SystemContext.png)
+The Academy Transfers service utilizes Redis as a session store, allowing for horizontal scalability and stateless application containers.
 
 <%= partial 'partials/links' %>
