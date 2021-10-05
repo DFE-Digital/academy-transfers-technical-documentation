@@ -4,7 +4,7 @@ host: academy-transfers-technical-documentation.london.cloudapps.digital
 # Header-related options
 show_govuk_logo: true
 service_name: Academy Transfers Service
-service_link: https://academy-transfers.service.gov.uk
+service_link: https://academy-transfers.london.cloudapps.digital/
 phase: Beta
 
 # Links to show on right-hand-side of header

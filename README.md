@@ -2,7 +2,7 @@
 
 This project uses the [Tech Docs Template][template], which is a [Middleman template][mmt] that enables us to build technical documentation using a GOV.UK style.
 
-👉 To find out more about setting up and managing content for this website, see the [Tech Docs Template documentation][tdt-docs].
+👉  To find out more about setting up and managing content for this website, see the [Tech Docs Template documentation][tdt-docs].
 
 ## Before you start
 
@@ -21,7 +21,7 @@ You can add content by editing the `.html.md.erb` files. These files support con
 - HTML
 - Ruby
 
-👉 You can use Markdown and HTML to [generate different content types][example-content] and [Ruby partials to manage content][partials].
+👉  You can use Markdown and HTML to [generate different content types][example-content] and [Ruby partials to manage content][partials].
 
 ## Preview your changes locally
 
@@ -31,9 +31,9 @@ To preview your new website locally, navigate to your project folder and run:
 bundle exec middleman server
 ```
 
-👉 See the generated website on `http://localhost:4567` in your browser. Any content changes you make to your website will be updated in real time.
+👉  See the generated website on `http://localhost:4567` in your browser. Any content changes you make to your website will be updated in real time.
 
-To shut down the Middleman instance running on your machine, use `ctrl+C`.
+To shut down the Middleman instance running on your machine, use `Ctrl+C`.
 
 If you make changes to the `config/tech-docs.yml` configuration file, you need to restart Middleman to see the changes.
 
