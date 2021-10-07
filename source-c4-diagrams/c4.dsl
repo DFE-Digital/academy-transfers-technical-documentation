@@ -42,9 +42,9 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         #  - between systems
         gitHub -> academyTransfersSystem "Deploys software to"
         
-        # relationships to/from containers
-        projectLead -> webApplication "Utilizes digital service to progress the transfer"
-        webApplication -> academiesApiSystem "Reads and writes to"
+        # relationships to/from containers within the system (includes protocols)
+        projectLead -> webApplication "Utilizes digital service to progress the transfer" "HTTPS"
+        webApplication -> academiesApiSystem "Reads and writes to" "RESTful HTTPS API"
         webApplication -> redisCache "Reads from and writes to" "TCP"
         
         deploymentEnvironment "Live" {
