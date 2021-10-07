@@ -11,20 +11,20 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         gitHub = softwareSystem "GitHub"
 
         enterprise "DfE" {
-            academyTransfersSystem = softwaresystem "Academy Transfers System" "Allows users to progress an AT project via a web site" "Internet-facing Web Application" {
-                webApplication = container "Web Application" "Allows users to progress an AT project via a web site" ".NET Core MVC 3.1 C# application" {
+            academyTransfersSystem = softwaresystem "Academy Transfers System" "GovPaaS: Allows users to progress an AT project via a web site" "Internet-facing Web Application" {
+                webApplication = container "Web Application" "Allows users to progress an AT project via a web site" "GovPaaS: .NET Core MVC 3.1 C# application" {
                     # TODO: list the components and interactions for real - dummy data here
                     gw = component "GatewayLayer"
                     xController = component "XxxController"
                     xController -> gw "Calls to get retrieve and parse from API over HTTPS"
                 }
-                redisCache = container "Redis" "Stores session data" "Key-value pair cache" "Cache" {
+                redisCache = container "Redis" "Stores session data" "GovPaaS: Key-value pair cache" "Cache" {
                     Tags "Database"
                 }
             }
             
-            academiesApiSystem = softwareSystem "Academies API" "Provides academies data for DfE" "API" {
-                academiesApiApplication = container "Web Application" "Allows the web site to persist and read data relating to an AT project" ".NET Core MVC 3.1 C# application"
+            academiesApiSystem = softwareSystem "Academies API" "Azure: Provides academies data for DfE" "API" {
+                academiesApiApplication = container "Web Application" "Allows the web site to persist and read data relating to an AT project" "Azure App Service: .NET Core MVC 3.1 C# application"
                 msSqlDatabase = container "Azure SQL DB" "Stores Academies Data" "Relational DB schema" "Azure SQL DB"
             }
         }
@@ -42,37 +42,33 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         #  - between systems
         gitHub -> academyTransfersSystem "Deploys software to"
         
-        # relationships to/from containers within the system (includes protocols)
-        projectLead -> webApplication "Utilizes digital service to progress the transfer" "HTTPS"
-        webApplication -> academiesApiSystem "Reads and writes to" "RESTful HTTPS API"
+        # relationships to/from containers
+        projectLead -> webApplication "Utilizes digital service to progress the transfer" "Web Browser"
+        webApplication -> academiesApiSystem "Reads and writes to" "HTTP"
         webApplication -> redisCache "Reads from and writes to" "TCP"
         
         deploymentEnvironment "Live" {
-            deploymentNode "GovPaaS" {
-                deploymentNode "Amazon Web Services" "" "" "Amazon Web Services - Cloud" {
-                    region = deploymentNode "EU-West-2" "" "" "Amazon Web Services - Region" {
-                        route53 = infrastructureNode "Route 53" "" "" "Amazon Web Services - Route 53"
-                        lb = infrastructureNode "Load Balancer" "" "" "Amazon Web Services - Elastic Load Balancing"
-    
-                        deploymentNode "Autoscaling group" "" "" "Amazon Web Services - Auto Scaling" {
-                            deploymentNode "Amazon EC2" "" "" "Amazon Web Services - EC2" {
-                                webApplicationInstance = containerInstance webApplication
-                            }
-                        }
-    
-                        deploymentNode "Amazon RDS" "" "" "Amazon Web Services - RDS" {
-                            deploymentNode "Redis" "" "" "Amazon Web Services - RDS Redis ElastiCache instance" {
-                                databaseInstance = containerInstance redisCache
-                            }
-                        }
-    
+            deploymentNode "Amazon Web Services (EU-West-2)" "" "" "Amazon Web Services - Cloud" {
+                deploymentNode "GovPaaS (Cloud Formation)" {
+                    lb = infrastructureNode "Load Balancer" "" "" ""
+
+                    wa = deploymentNode "Autoscaling Cloud Formation Instances" "" "" "" {
+                        webApplicationInstance = containerInstance webApplication
+                    }
+
+                    deploymentNode "Redis" "" "" "Amazon Web Services - RDS Redis ElastiCache instance" {
+                        databaseInstance = containerInstance redisCache
                     }
                 }
             }
+            
+            az = deploymentNode "Azure CIP" {
+                academiesApiInstance = containerInstance academiesApiApplication
+            }
 
             # infrastructure relationships
-            route53 -> lb "Forwards requests to" "HTTPS"
             lb -> webApplicationInstance "Forwards requests to" "HTTPS"
+            wa -> az "Reads and writes data" "HTTPS"
         }
     }
 
@@ -112,7 +108,7 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         }
 
         # Misc - deployment
-        deployment "academyTransfersSystem" "Live" "AmazonWebServicesDeployment" {
+        deployment "*" "Live" "AmazonWebServicesDeployment" {
             include *
             autolayout lr
         }
