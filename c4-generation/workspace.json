@@ -1,0 +1,605 @@
+{
+  "id" : 1,
+  "name" : "Academy Transfers",
+  "description" : "Workspace containing C4 diagrams for AT",
+  "revision" : 0,
+  "lastModifiedDate" : "2021-10-08T14:27:45Z",
+  "lastModifiedAgent" : "structurizr-web/2526/diagram",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJBY2FkZW15IFRyYW5zZmVycyIgIldvcmtzcGFjZSBjb250YWluaW5nIEM0IGRpYWdyYW1zIGZvciBBVCIgewoKICAgIG1vZGVsIHsKICAgICAgICBhY2FkZW15ID0gcGVyc29uICJBY2FkZW15IiAiIiAiQWNhZGVteSIKICAgICAgICBzb3VyY2VUcnVzdCA9IHBlcnNvbiAiU291cmNlIFRydXN0IiAiIiAiVHJ1c3QiIAogICAgICAgIHRhcmdldFRydXN0ID0gcGVyc29uICJUYXJnZXQgVHJ1c3QiICIiICJUcnVzdCIKICAgICAgICByc2MgPSBwZXJzb24gIlJlZ2lvbmFsIFNjaG9vbHMgQ29tbWlzc2lvbmVyIiAiIiAiUlNDIgogICAgICAgIHByb2plY3RMZWFkID0gcGVyc29uICJQcm9qZWN0IExlYWQiCiAgICAgICAgZGV2ZWxvcGVyID0gcGVyc29uICJEZXZlbG9wZXIiICJBIGRldmVsb3BlciBmb3IgQVQiCiAgICAgICAgbG9jYWxJZGUgPSBzb2Z0d2FyZVN5c3RlbSAiTG9jYWwgRGV2ZWxvcG1lbnQgRW52aXJvbm1lbnQiICJUeXBpY2FsbHkgYW4gSURFIHBsdXMgcmVxdWlyZWQgcnVudGltZXMiCiAgICAgICAgZ2l0SHViID0gc29mdHdhcmVTeXN0ZW0gIkdpdEh1YiIKCiAgICAgICAgZW50ZXJwcmlzZSAiRGZFIiB7CiAgICAgICAgICAgIGFjYWRlbXlUcmFuc2ZlcnNTeXN0ZW0gPSBzb2Z0d2FyZXN5c3RlbSAiQWNhZGVteSBUcmFuc2ZlcnMgU3lzdGVtIiAiR292UGFhUzogQWxsb3dzIHVzZXJzIHRvIHByb2dyZXNzIGFuIEFUIHByb2plY3QgdmlhIGEgd2ViIHNpdGUiICJJbnRlcm5ldC1mYWNpbmcgV2ViIEFwcGxpY2F0aW9uIiB7CiAgICAgICAgICAgICAgICB3ZWJBcHBsaWNhdGlvbiA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiQWxsb3dzIHVzZXJzIHRvIHByb2dyZXNzIGFuIEFUIHByb2plY3QgdmlhIGEgd2ViIHNpdGUiICJHb3ZQYWFTOiAuTkVUIENvcmUgTVZDIDMuMSBDIyBhcHBsaWNhdGlvbiIgewogICAgICAgICAgICAgICAgICAgICMgVE9ETzogbGlzdCB0aGUgY29tcG9uZW50cyBhbmQgaW50ZXJhY3Rpb25zIGZvciByZWFsIC0gZHVtbXkgZGF0YSBoZXJlCiAgICAgICAgICAgICAgICAgICAgZ3cgPSBjb21wb25lbnQgIkdhdGV3YXlMYXllciIKICAgICAgICAgICAgICAgICAgICB4Q29udHJvbGxlciA9IGNvbXBvbmVudCAiWHh4Q29udHJvbGxlciIKICAgICAgICAgICAgICAgICAgICB4Q29udHJvbGxlciAtPiBndyAiQ2FsbHMgdG8gZ2V0IHJldHJpZXZlIGFuZCBwYXJzZSBmcm9tIEFQSSBvdmVyIEhUVFBTIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgcmVkaXNDYWNoZSA9IGNvbnRhaW5lciAiUmVkaXMiICJTdG9yZXMgc2Vzc2lvbiBkYXRhIiAiR292UGFhUzogS2V5LXZhbHVlIHBhaXIgY2FjaGUiICJDYWNoZSIgewogICAgICAgICAgICAgICAgICAgIFRhZ3MgIkRhdGFiYXNlIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBhY2FkZW1pZXNBcGlTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiQWNhZGVtaWVzIEFQSSIgIkF6dXJlOiBQcm92aWRlcyBhY2FkZW1pZXMgZGF0YSBmb3IgRGZFIiAiQVBJIiB7CiAgICAgICAgICAgICAgICBhY2FkZW1pZXNBcGlBcHBsaWNhdGlvbiA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiQWxsb3dzIHRoZSB3ZWIgc2l0ZSB0byBwZXJzaXN0IGFuZCByZWFkIGRhdGEgcmVsYXRpbmcgdG8gYW4gQVQgcHJvamVjdCIgIkF6dXJlIEFwcCBTZXJ2aWNlOiAuTkVUIENvcmUgTVZDIDMuMSBDIyBhcHBsaWNhdGlvbiIKICAgICAgICAgICAgICAgIG1zU3FsRGF0YWJhc2UgPSBjb250YWluZXIgIkF6dXJlIFNRTCBEQiIgIlN0b3JlcyBBY2FkZW1pZXMgRGF0YSIgIlJlbGF0aW9uYWwgREIgc2NoZW1hIiAiQXp1cmUgU1FMIERCIgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiBwZW9wbGUgYW5kIHNvZnR3YXJlIHN5c3RlbXMKICAgICAgICAjICAtIGRldiwgQ0kvQ0QKICAgICAgICBkZXZlbG9wZXIgLT4gbG9jYWxJZGUgIkRldmVsb3BzIHdpdGggY29kZSIKICAgICAgICBsb2NhbElkZSAtPiBnaXRIdWIgIlB1c2hlcyBjb2RlIHRvIgogICAgICAgIGdpdEh1YiAtPiBnaXRIdWIgIkJ1aWxkcywgdGVzdHMgYW5kIGRlcGxveXMgY2hhbmdlcyIKICAgICAgICAjICAtIGJldHdlZW4gcGVvcGxlCiAgICAgICAgdGFyZ2V0VHJ1c3QgLT4gYWNhZGVteSAiU3BvbnNvcnMiCiAgICAgICAgYWNhZGVteSAtPiBzb3VyY2VUcnVzdCAiTW92ZXMgZnJvbSBoZXJlIgogICAgICAgIGFjYWRlbXkgLT4gdGFyZ2V0VHJ1c3QgIk1vdmVzIHRvIGhlcmUiCiAgICAgICAgcnNjIC0+IHByb2plY3RMZWFkICJJbml0aWF0ZXMgdHJhbnNmZXIiICAgICAgICAgICAgCiAgICAgICAgIyAgLSBiZXR3ZWVuIHN5c3RlbXMKICAgICAgICBnaXRIdWIgLT4gYWNhZGVteVRyYW5zZmVyc1N5c3RlbSAiRGVwbG95cyBzb2Z0d2FyZSB0byIKICAgICAgICAKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgdG8vZnJvbSBjb250YWluZXJzCiAgICAgICAgcHJvamVjdExlYWQgLT4gd2ViQXBwbGljYXRpb24gIlV0aWxpemVzIGRpZ2l0YWwgc2VydmljZSB0byBwcm9ncmVzcyB0aGUgdHJhbnNmZXIiICJXZWIgQnJvd3NlciIKICAgICAgICB3ZWJBcHBsaWNhdGlvbiAtPiBhY2FkZW1pZXNBcGlTeXN0ZW0gIlJlYWRzIGFuZCB3cml0ZXMgdG8iICJIVFRQIgogICAgICAgIHdlYkFwcGxpY2F0aW9uIC0+IHJlZGlzQ2FjaGUgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byIgIlRDUCIKICAgICAgICAKICAgICAgICBkZXBsb3ltZW50RW52aXJvbm1lbnQgIkxpdmUiIHsKICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkFtYXpvbiBXZWIgU2VydmljZXMgKEVVLVdlc3QtMikiICIiICIiICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gQ2xvdWQiIHsKICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJHb3ZQYWFTIChDbG91ZCBGb3JtYXRpb24pIiB7CiAgICAgICAgICAgICAgICAgICAgbGIgPSBpbmZyYXN0cnVjdHVyZU5vZGUgIkxvYWQgQmFsYW5jZXIiICIiICIiICIiCgogICAgICAgICAgICAgICAgICAgIHdhID0gZGVwbG95bWVudE5vZGUgIkF1dG9zY2FsaW5nIENsb3VkIEZvcm1hdGlvbiBJbnN0YW5jZXMiICIiICIiICIiIHsKICAgICAgICAgICAgICAgICAgICAgICAgd2ViQXBwbGljYXRpb25JbnN0YW5jZSA9IGNvbnRhaW5lckluc3RhbmNlIHdlYkFwcGxpY2F0aW9uCiAgICAgICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiUmVkaXMiICIiICIiICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gUkRTIFJlZGlzIEVsYXN0aUNhY2hlIGluc3RhbmNlIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGRhdGFiYXNlSW5zdGFuY2UgPSBjb250YWluZXJJbnN0YW5jZSByZWRpc0NhY2hlCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBheiA9IGRlcGxveW1lbnROb2RlICJBenVyZSBDSVAiIHsKICAgICAgICAgICAgICAgIGFjYWRlbWllc0FwaUluc3RhbmNlID0gY29udGFpbmVySW5zdGFuY2UgYWNhZGVtaWVzQXBpQXBwbGljYXRpb24KICAgICAgICAgICAgfQoKICAgICAgICAgICAgIyBpbmZyYXN0cnVjdHVyZSByZWxhdGlvbnNoaXBzCiAgICAgICAgICAgIGxiIC0+IHdlYkFwcGxpY2F0aW9uSW5zdGFuY2UgIkZvcndhcmRzIHJlcXVlc3RzIHRvIiAiSFRUUFMiCiAgICAgICAgICAgIHdhIC0+IGF6ICJSZWFkcyBhbmQgd3JpdGVzIGRhdGEiICJIVFRQUyIKICAgICAgICB9CiAgICB9CgogICAgdmlld3MgewogICAgICAgICMgJ0xldmVsIDAnIC0gU3lzdGVtIExhbmRzY2FwZQogICAgICAgICMgTm90IHJlYWxseSBhIGxldmVsIGluIGl0c2VsZi4gU2hvd3MgY29udGV4dCBhbmQgYWxsIHBlcnNvbmFzL3JvbGVzLgogICAgICAgIHN5c3RlbWxhbmRzY2FwZSAiU3lzdGVtTGFuZHNjYXBlIiB7CiAgICAgICAgICAgIHRpdGxlICJTeXN0ZW0gTGFuZHNjYXBlIGZvciBBY2FkZW15IFRyYW5zZmVycyBzZXJ2aWNlIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgIyBMZXZlbCAxIC0gQ29udGV4dAogICAgICAgICMgVGhpcyBpcyB0aGUgbW9zdCB6b29tZWQtb3V0IHZpZXcgc2hvd2luZyBhIGJpZyBwaWN0dXJlIG9mIHRoZSBzeXN0ZW0gbGFuZHNjYXBlLiAKICAgICAgICAjIFRoZSBmb2N1cyBzaG91bGQgYmUgb24gcGVvcGxlIChhY3RvcnMsIHJvbGVzLCBwZXJzb25hcywgZXRjKSBhbmQgc29mdHdhcmUgc3lzdGVtcwogICAgICAgICMgcmF0aGVyIHRoYW4gdGVjaG5vbG9naWVzLCBwcm90b2NvbHMgYW5kIG90aGVyIGxvdy1sZXZlbCBkZXRhaWxzLiBJdCdzIHRoZSBzb3J0IG9mIAogICAgICAgICMgZGlhZ3JhbSB0aGF0IHlvdSBjb3VsZCBzaG93IHRvIG5vbi10ZWNobmljYWwgcGVvcGxlLgogICAgICAgIHN5c3RlbUNvbnRleHQgImFjYWRlbXlUcmFuc2ZlcnNTeXN0ZW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgICMgTGV2ZWwgMiAtIENvbnRhaW5lcgogICAgICAgICMgVGhlIENvbnRhaW5lciBkaWFncmFtIHNob3dzIHRoZSBoaWdoLWxldmVsIHNoYXBlIG9mIHRoZSBzb2Z0d2FyZSBhcmNoaXRlY3R1cmUgYW5kIAogICAgICAgICMgaG93IHJlc3BvbnNpYmlsaXRpZXMgYXJlIGRpc3RyaWJ1dGVkIGFjcm9zcyBpdC4gSXQgYWxzbyBzaG93cyB0aGUgbWFqb3IgdGVjaG5vbG9neSAKICAgICAgICAjIGNob2ljZXMgYW5kIGhvdyB0aGUgY29udGFpbmVycyBjb21tdW5pY2F0ZSB3aXRoIG9uZSBhbm90aGVyLiBJdCdzIGEgc2ltcGxlLCBoaWdoLWxldmVsCiAgICAgICAgIyB0ZWNobm9sb2d5IGZvY3Vzc2VkIGRpYWdyYW0gdGhhdCBpcyB1c2VmdWwgZm9yIHNvZnR3YXJlIGRldmVsb3BlcnMgYW5kIHN1cHBvcnQvb3BlcmF0aW9ucyBzdGFmZiBhbGlrZS4KICAgICAgICBjb250YWluZXIgYWNhZGVteVRyYW5zZmVyc1N5c3RlbSB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0CiAgICAgICAgfQogICAgICAgIAogICAgICAgICMgTGV2ZWwgMyAtIENvbXBvbmVudAogICAgICAgIGNvbXBvbmVudCB3ZWJBcHBsaWNhdGlvbiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICAjIE1pc2MgLSBkZXBsb3ltZW50CiAgICAgICAgZGVwbG95bWVudCAiKiIgIkxpdmUiICJBbWF6b25XZWJTZXJ2aWNlc0RlcGxveW1lbnQiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIHRoZW1lIGRlZmF1bHQKICAgICAgICAKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJUcnVzdCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjYjViNDgyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQWNhZGVteSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjYjViNDgyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiUlNDIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNiNWI0ODIKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgc2hhcGUgQ3lsaW5kZXIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCgp9Cg=="
+  },
+  "configuration" : { },
+  "model" : {
+    "enterprise" : {
+      "name" : "DfE"
+    },
+    "people" : [ {
+      "id" : "3",
+      "tags" : "Element,Person,Trust",
+      "name" : "Target Trust",
+      "relationships" : [ {
+        "id" : "21",
+        "tags" : "Relationship",
+        "sourceId" : "3",
+        "destinationId" : "1",
+        "description" : "Sponsors"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "1",
+      "tags" : "Element,Person,Academy",
+      "name" : "Academy",
+      "relationships" : [ {
+        "id" : "22",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Moves from here"
+      }, {
+        "id" : "23",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Moves to here"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "4",
+      "tags" : "Element,Person,RSC",
+      "name" : "Regional Schools Commissioner",
+      "relationships" : [ {
+        "id" : "24",
+        "tags" : "Relationship",
+        "sourceId" : "4",
+        "destinationId" : "5",
+        "description" : "Initiates transfer"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "6",
+      "tags" : "Element,Person",
+      "name" : "Developer",
+      "description" : "A developer for AT",
+      "relationships" : [ {
+        "id" : "18",
+        "tags" : "Relationship",
+        "sourceId" : "6",
+        "destinationId" : "7",
+        "description" : "Develops with code"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "2",
+      "tags" : "Element,Person,Trust",
+      "name" : "Source Trust",
+      "location" : "Unspecified"
+    }, {
+      "id" : "5",
+      "tags" : "Element,Person",
+      "name" : "Project Lead",
+      "relationships" : [ {
+        "id" : "26",
+        "tags" : "Relationship",
+        "sourceId" : "5",
+        "destinationId" : "10",
+        "description" : "Utilizes digital service to progress the transfer",
+        "technology" : "Web Browser"
+      }, {
+        "id" : "27",
+        "tags" : "Relationship",
+        "sourceId" : "5",
+        "destinationId" : "9",
+        "description" : "Utilizes digital service to progress the transfer",
+        "technology" : "Web Browser"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "9",
+      "tags" : "Element,Software System,Internet-facing Web Application",
+      "name" : "Academy Transfers System",
+      "description" : "GovPaaS: Allows users to progress an AT project via a web site",
+      "relationships" : [ {
+        "id" : "29",
+        "tags" : "Relationship",
+        "sourceId" : "9",
+        "destinationId" : "15",
+        "description" : "Reads and writes to",
+        "technology" : "HTTP"
+      } ],
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "10",
+        "tags" : "Element,Container",
+        "name" : "Web Application",
+        "description" : "Allows users to progress an AT project via a web site",
+        "relationships" : [ {
+          "id" : "28",
+          "tags" : "Relationship",
+          "sourceId" : "10",
+          "destinationId" : "15",
+          "description" : "Reads and writes to",
+          "technology" : "HTTP"
+        }, {
+          "id" : "30",
+          "tags" : "Relationship",
+          "sourceId" : "10",
+          "destinationId" : "14",
+          "description" : "Reads from and writes to",
+          "technology" : "TCP"
+        } ],
+        "technology" : "GovPaaS: .NET Core MVC 3.1 C# application",
+        "components" : [ {
+          "id" : "12",
+          "tags" : "Element,Component",
+          "name" : "XxxController",
+          "relationships" : [ {
+            "id" : "13",
+            "tags" : "Relationship",
+            "sourceId" : "12",
+            "destinationId" : "11",
+            "description" : "Calls to get retrieve and parse from API over HTTPS"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "11",
+          "tags" : "Element,Component",
+          "name" : "GatewayLayer",
+          "size" : 0
+        } ]
+      }, {
+        "id" : "14",
+        "tags" : "Element,Container,Cache,Database",
+        "name" : "Redis",
+        "description" : "Stores session data",
+        "technology" : "GovPaaS: Key-value pair cache"
+      } ]
+    }, {
+      "id" : "15",
+      "tags" : "Element,Software System,API",
+      "name" : "Academies API",
+      "description" : "Azure: Provides academies data for DfE",
+      "location" : "Internal",
+      "containers" : [ {
+        "id" : "16",
+        "tags" : "Element,Container",
+        "name" : "Web Application",
+        "description" : "Allows the web site to persist and read data relating to an AT project",
+        "technology" : "Azure App Service: .NET Core MVC 3.1 C# application"
+      }, {
+        "id" : "17",
+        "tags" : "Element,Container,Azure SQL DB",
+        "name" : "Azure SQL DB",
+        "description" : "Stores Academies Data",
+        "technology" : "Relational DB schema"
+      } ]
+    }, {
+      "id" : "8",
+      "tags" : "Element,Software System",
+      "name" : "GitHub",
+      "relationships" : [ {
+        "id" : "20",
+        "tags" : "Relationship",
+        "sourceId" : "8",
+        "destinationId" : "8",
+        "description" : "Builds, tests and deploys changes"
+      }, {
+        "id" : "25",
+        "tags" : "Relationship",
+        "sourceId" : "8",
+        "destinationId" : "9",
+        "description" : "Deploys software to"
+      } ],
+      "location" : "External"
+    }, {
+      "id" : "7",
+      "tags" : "Element,Software System",
+      "name" : "Local Development Environment",
+      "description" : "Typically an IDE plus required runtimes",
+      "relationships" : [ {
+        "id" : "19",
+        "tags" : "Relationship",
+        "sourceId" : "7",
+        "destinationId" : "8",
+        "description" : "Pushes code to"
+      } ],
+      "location" : "External"
+    } ],
+    "deploymentNodes" : [ {
+      "id" : "31",
+      "tags" : "Element,Deployment Node,Amazon Web Services - Cloud",
+      "name" : "Amazon Web Services (EU-West-2)",
+      "environment" : "Live",
+      "instances" : 1,
+      "children" : [ {
+        "id" : "32",
+        "tags" : "Element,Deployment Node",
+        "name" : "GovPaaS (Cloud Formation)",
+        "environment" : "Live",
+        "instances" : 1,
+        "children" : [ {
+          "id" : "34",
+          "tags" : "Element,Deployment Node",
+          "name" : "Autoscaling Cloud Formation Instances",
+          "relationships" : [ {
+            "id" : "42",
+            "tags" : "Relationship",
+            "sourceId" : "34",
+            "destinationId" : "39",
+            "description" : "Reads and writes data",
+            "technology" : "HTTPS"
+          } ],
+          "environment" : "Live",
+          "instances" : 1,
+          "containerInstances" : [ {
+            "id" : "35",
+            "tags" : "Container Instance",
+            "relationships" : [ {
+              "id" : "38",
+              "sourceId" : "35",
+              "destinationId" : "37",
+              "description" : "Reads from and writes to",
+              "technology" : "TCP",
+              "linkedRelationshipId" : "30"
+            } ],
+            "environment" : "Live",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "10"
+          } ]
+        }, {
+          "id" : "36",
+          "tags" : "Element,Deployment Node,Amazon Web Services - RDS Redis ElastiCache instance",
+          "name" : "Redis",
+          "environment" : "Live",
+          "instances" : 1,
+          "containerInstances" : [ {
+            "id" : "37",
+            "tags" : "Container Instance",
+            "environment" : "Live",
+            "deploymentGroups" : [ "Default" ],
+            "instanceId" : 1,
+            "containerId" : "14"
+          } ]
+        } ],
+        "infrastructureNodes" : [ {
+          "id" : "33",
+          "tags" : "Element,Infrastructure Node",
+          "name" : "Load Balancer",
+          "relationships" : [ {
+            "id" : "41",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "35",
+            "description" : "Forwards requests to",
+            "technology" : "HTTPS"
+          } ],
+          "environment" : "Live"
+        } ]
+      } ]
+    }, {
+      "id" : "39",
+      "tags" : "Element,Deployment Node",
+      "name" : "Azure CIP",
+      "environment" : "Live",
+      "instances" : 1,
+      "containerInstances" : [ {
+        "id" : "40",
+        "tags" : "Container Instance",
+        "environment" : "Live",
+        "deploymentGroups" : [ "Default" ],
+        "instanceId" : 1,
+        "containerId" : "16"
+      } ]
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "SystemLandscape",
+      "paperSize" : "A3_Portrait",
+      "dimensions" : {
+        "width" : 2966,
+        "height" : 3520
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "title" : "System Landscape for Academy Transfers service",
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 2354,
+        "y" : 213
+      }, {
+        "id" : "2",
+        "x" : 1654,
+        "y" : 913
+      }, {
+        "id" : "3",
+        "x" : 2354,
+        "y" : 913
+      }, {
+        "id" : "15",
+        "x" : 542,
+        "y" : 2913
+      }, {
+        "id" : "4",
+        "x" : 204,
+        "y" : 913
+      }, {
+        "id" : "5",
+        "x" : 204,
+        "y" : 1613
+      }, {
+        "id" : "6",
+        "x" : 929,
+        "y" : 213
+      }, {
+        "id" : "7",
+        "x" : 904,
+        "y" : 963
+      }, {
+        "id" : "8",
+        "x" : 904,
+        "y" : 1663
+      }, {
+        "id" : "9",
+        "x" : 542,
+        "y" : 2313
+      } ],
+      "relationships" : [ {
+        "id" : "29"
+      }, {
+        "id" : "18"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "23",
+        "vertices" : [ {
+          "x" : 2404,
+          "y" : 763
+        } ]
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "21",
+        "vertices" : [ {
+          "x" : 2704,
+          "y" : 763
+        } ]
+      }, {
+        "id" : "20",
+        "vertices" : [ {
+          "x" : 1654,
+          "y" : 1707
+        }, {
+          "x" : 1654,
+          "y" : 1813
+        }, {
+          "x" : 1654,
+          "y" : 1909
+        } ]
+      }, {
+        "id" : "19"
+      } ]
+    } ],
+    "systemContextViews" : [ {
+      "softwareSystemId" : "9",
+      "key" : "AcademyTransfersSystem-SystemContext",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2470,
+        "height" : 1491
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "15",
+        "x" : 1708,
+        "y" : 621
+      }, {
+        "id" : "5",
+        "x" : 233,
+        "y" : 208
+      }, {
+        "id" : "8",
+        "x" : 208,
+        "y" : 983
+      }, {
+        "id" : "9",
+        "x" : 958,
+        "y" : 621
+      } ],
+      "relationships" : [ {
+        "id" : "29"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "20",
+        "vertices" : [ {
+          "x" : 298,
+          "y" : 683
+        }, {
+          "x" : 433,
+          "y" : 683
+        }, {
+          "x" : 556,
+          "y" : 683
+        } ]
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "9",
+      "key" : "AcademyTransfersSystem-Container",
+      "paperSize" : "A4_Portrait",
+      "dimensions" : {
+        "width" : 1754,
+        "height" : 2120
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "14",
+        "x" : 329,
+        "y" : 1508
+      }, {
+        "id" : "15",
+        "x" : 1079,
+        "y" : 1508
+      }, {
+        "id" : "5",
+        "x" : 354,
+        "y" : 208
+      }, {
+        "id" : "10",
+        "x" : 329,
+        "y" : 908
+      } ],
+      "relationships" : [ {
+        "id" : "28"
+      }, {
+        "id" : "26"
+      }, {
+        "id" : "30"
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "AcademyTransfersSystem-WebApplication-Component",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 1858,
+        "height" : 958
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "10",
+      "externalContainerBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "11",
+        "x" : 1079,
+        "y" : 329
+      }, {
+        "id" : "12",
+        "x" : 329,
+        "y" : 329
+      } ],
+      "relationships" : [ {
+        "id" : "13"
+      } ]
+    } ],
+    "deploymentViews" : [ {
+      "key" : "AmazonWebServicesDeployment",
+      "paperSize" : "A4_Landscape",
+      "dimensions" : {
+        "width" : 2920,
+        "height" : 2150
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "environment" : "Live",
+      "elements" : [ {
+        "id" : "33",
+        "x" : 433,
+        "y" : 712
+      }, {
+        "id" : "34",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "35",
+        "x" : 1183,
+        "y" : 712
+      }, {
+        "id" : "36",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "37",
+        "x" : 1933,
+        "y" : 712
+      }, {
+        "id" : "39",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "40",
+        "x" : 1933,
+        "y" : 1520
+      }, {
+        "id" : "31",
+        "x" : 175,
+        "y" : 175
+      }, {
+        "id" : "32",
+        "x" : 175,
+        "y" : 175
+      } ],
+      "relationships" : [ {
+        "id" : "41"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "38"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "Trust",
+          "background" : "#b5b482"
+        }, {
+          "tag" : "Academy",
+          "background" : "#b5b482"
+        }, {
+          "tag" : "RSC",
+          "background" : "#b5b482"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "lastSavedView" : "SystemLandscape"
+    }
+  }
+}

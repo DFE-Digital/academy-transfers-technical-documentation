@@ -1,0 +1,37 @@
+version: "2.4"
+services:
+  struct:
+    image: "structurizr/lite"
+    volumes:
+     - .:/usr/local/structurizr
+    ports:
+      - "8080:8080"
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.5
+
+  puppet:
+    image: "alekzonder/puppeteer:latest"
+    mem_limit: 1GB
+    volumes:
+      - ./export-diagrams.js:/app/index.js
+      - .:/screenshots
+    extra_hosts:
+      - "localhost:10.5.0.5"
+    #command: ["node", "index.js", "http://struct:8080", "png"]
+    command: bash -c "sleep 10; node index.js http://struct:8080 png"
+    #command: ["screenshot", "http://localhost:8080", "1366x768"]
+    #command: bash -c "sleep 10; screenshot http://localhost:8080 1366x768"
+    depends_on:
+      - struct
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6      
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
