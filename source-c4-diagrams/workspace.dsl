@@ -1,11 +1,11 @@
 workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
 
     model {
-        academy = person "Academy" "" "Academy"
-        sourceTrust = person "Source Trust" "" "Trust" 
-        targetTrust = person "Target Trust" "" "Trust"
+        academy = person "Academy/ies" "" "Academy/ies"
+        sourceTrust = person "Outgoing Trust" "" "Trust" 
+        targetTrust = person "Incoming Trust / Sponsor" "" "Trust"
         rsc = person "Regional Schools Commissioner" "" "RSC"
-        projectLead = person "Project Lead"
+        projectLead = person "Delivery Officer"
         developer = person "Developer" "A developer for AT"
         localIde = softwareSystem "Local Development Environment" "Typically an IDE plus required runtimes"
         gitHub = softwareSystem "GitHub"
@@ -35,7 +35,6 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         localIde -> gitHub "Pushes code to"
         gitHub -> gitHub "Builds, tests and deploys changes"
         #  - between people
-        targetTrust -> academy "Sponsors"
         academy -> sourceTrust "Moves from here"
         academy -> targetTrust "Moves to here"
         rsc -> projectLead "Initiates transfer"            
@@ -119,7 +118,7 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
             element "Trust" {
                 background #b5b482
             }
-            element "Academy" {
+            element "Academy/ies" {
                 background #b5b482
             }
             element "RSC" {
