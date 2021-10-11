@@ -91,8 +91,8 @@ const filenameSuffix = 'structurizr-' + workspaceId + '-';
     await page.waitForFunction('structurizr.scripting.isDiagramRendered() === true');
 
     if (format === "svg") {
-      const diagramFilename = filenameSuffix + diagramKey + '.svg';
-      const diagramKeyFilename = filenameSuffix + diagramKey + '-key.svg'
+      const diagramFilename = '/screenshots/' + filenameSuffix + diagramKey + '.svg';
+      const diagramKeyFilename = '/screenshots/' + filenameSuffix + diagramKey + '-key.svg'
 
       var svgForDiagram = await page.evaluate(() => {
         return structurizr.scripting.exportCurrentDiagramToSVG();
@@ -114,8 +114,8 @@ const filenameSuffix = 'structurizr-' + workspaceId + '-';
       });
       actualNumberOfExports++;
     } else {
-      const diagramFilename = filenameSuffix + diagramKey + '.png';
-      const diagramKeyFilename = filenameSuffix + diagramKey + '-key.png'
+      const diagramFilename = '/screenshots/' + filenameSuffix + diagramKey + '.png';
+      const diagramKeyFilename = '/screenshots/' + filenameSuffix + diagramKey + '-key.png'
 
       page.evaluate((diagramFilename) => {
         structurizr.scripting.exportCurrentDiagramToPNG({ crop: false }, function(png) {
