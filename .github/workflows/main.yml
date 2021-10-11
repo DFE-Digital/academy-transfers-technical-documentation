@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Publish diagrams
-        run: docker run --shm-size 1G --rm -v $(pwd)/c4-generation/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png 69325
+        run: sudo docker run --shm-size 1G --rm -v $(pwd)/c4-generation/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png 69325
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
