@@ -26,7 +26,7 @@ jobs:
           ls -al
   
       - name: Update Cloud workspace
-        run: docker run -it --rm -v $(pwd):/usr/local/structurizr structurizr/cli push -id 69325 -key ${{ secrets.STRUCTURIZR_API_KEY }} -secret ${{ secrets.STRUCTURIZR_API_SECRET }} -workspace ./source-c4-diagrams/workspace.dsl
+        run: docker run --rm -v $(pwd):/usr/local/structurizr structurizr/cli push -id 69325 -key ${{ secrets.STRUCTURIZR_API_KEY }} -secret ${{ secrets.STRUCTURIZR_API_SECRET }} -workspace ./source-c4-diagrams/workspace.dsl
 
       - name: Publish diagrams
         run: docker run --shm-size 1G --rm -v $(pwd)/c4-generation/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png 69325
