@@ -22,6 +22,7 @@ jobs:
       - name: Create diagrams folder
         run: | 
           mkdir ./screenshots 
+          chmod -R 777 ./screenshots
           ls -al
 
       - name: Publish diagrams
