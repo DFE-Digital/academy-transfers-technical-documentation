@@ -15,9 +15,12 @@ jobs:
     name: Build website
     runs-on: ubuntu-latest
     steps:
-      - run: docker -v
+
       - name: Checkout
         uses: actions/checkout@v2
+      
+      - name: Publish diagrams
+        run: ls -a
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
