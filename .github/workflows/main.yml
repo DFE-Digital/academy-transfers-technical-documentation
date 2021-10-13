@@ -15,9 +15,20 @@ jobs:
     name: Build website
     runs-on: ubuntu-latest
     steps:
-      - run: docker -v
+
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Upload and publish C4 diagrams
+        run: | 
+          mkdir ./screenshots 
+          chmod -R 777 ./screenshots
+          docker run --rm -v $(pwd):/usr/local/structurizr structurizr/cli push -id ${{ secrets.STRUCTURIZR_WORKSPACE_ID }} -key ${{ secrets.STRUCTURIZR_API_KEY }} -secret ${{ secrets.STRUCTURIZR_API_SECRET }} -workspace ./source-c4-diagrams/workspace.dsl
+          docker run --shm-size 1G --rm -v $(pwd)/source-c4-diagrams/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png ${{ secrets.STRUCTURIZR_WORKSPACE_ID }}
+          cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-SystemLandscape.png ./source/architecture/context/images/SystemLandscape.png
+          cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AcademyTransfersSystem-SystemContext.png ./source/architecture/context/images/SystemContext.png
+          cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AcademyTransfersSystem-Container.png ./source/architecture/containers/images/Containers.png
+          cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AmazonWebServicesDeployment.png ./source/architecture/deployment/images/Deployment-Live.png
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
