@@ -29,7 +29,7 @@ jobs:
         run: docker run --rm -v $(pwd):/usr/local/structurizr structurizr/cli push -id ${{ secrets.STRUCTURIZR_WORKSPACE_ID }} -key ${{ secrets.STRUCTURIZR_API_KEY }} -secret ${{ secrets.STRUCTURIZR_API_SECRET }} -workspace ./source-c4-diagrams/workspace.dsl
 
       - name: Publish diagrams
-        run: docker run --shm-size 1G --rm -v $(pwd)/c4-generation/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png ${{ secrets.STRUCTURIZR_WORKSPACE_ID }}
+        run: docker run --shm-size 1G --rm -v $(pwd)/source-c4-diagrams/export-private-cloud-diagrams.js:/app/index.js -v $(pwd)/screenshots:/screenshots alekzonder/puppeteer:latest node index.js "https://structurizr.com" "${{ secrets.STRUCTURIZR_USERNAME }}" '${{ secrets.STRUCTURIZR_PASSWORD }}' png ${{ secrets.STRUCTURIZR_WORKSPACE_ID }}
 
       - name: Copy diagrams over
         run: |
