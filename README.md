@@ -23,7 +23,7 @@ You can add content by editing the `.html.md.erb` files. These files support con
 
 👉  You can use Markdown and HTML to [generate different content types][example-content] and [Ruby partials to manage content][partials].
 
-## Making changes to the C4 diagrams
+## Making changes to the Architecture (C4) diagrams
 
 See: [README.md](./source-c4-diagrams/README.md).
 
@@ -40,6 +40,8 @@ bundle exec middleman server
 To shut down the Middleman instance running on your machine, use `Ctrl+C`.
 
 If you make changes to the `config/tech-docs.yml` configuration file, you need to restart Middleman to see the changes.
+
+Note: this will *not* regenerate the C4 images - this is [covered by the seperate processes](./source-c4-diagrams/README.md).
 
 ## Build
 
