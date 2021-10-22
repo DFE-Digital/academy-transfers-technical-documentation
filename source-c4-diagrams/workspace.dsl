@@ -11,20 +11,29 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         gitHub = softwareSystem "GitHub"
 
         enterprise "DfE" {
-            academyTransfersSystem = softwaresystem "Academy Transfers System" "GovPaaS: Allows users to progress an AT project via a web site" "Internet-facing Web Application" {
+            academyTransfersSystem = softwaresystem "Academy Transfers System" "GOV.UK PaaS: Allows users to progress an AT project via a web site" "Internet-facing Web Application" {
                 webApplication = container "Web Application" "Allows users to progress an AT project via a web site" "GovPaaS: .NET Core MVC 3.1 C# application" {
-                    # TODO: list the components and interactions for real - dummy data here
-                    gw = component "GatewayLayer"
-                    xController = component "XxxController"
-                    xController -> gw "Calls to get retrieve and parse from API over HTTPS"
+                    controller = component "Controllers"
+                    razorView = component "Razor Views"
+                    razorPage = component "Razor Pages"
+                    useCase = component "Use Cases"
+                    gw = component "TRAMS Repositories"
+                    httpClient = component "HTTP Client"
+                    razorView -> controller "GET / POST"
+                    controller -> useCase "Delegates to"
+                    razorPage -> useCase "Delegates to"
+                    useCase -> gw "Get and retrieve data"
+                    gw -> httpClient "Calls to the correct API endpoints, parses repsonses, over HTTPS"
+                    xDocGen = component "Document Generation Library"
+                    useCase -> xDocGen "Creates Word document (HTB)"
                 }
-                redisCache = container "Redis" "Stores session data" "GovPaaS: Key-value pair cache" "Cache" {
+                redisCache = container "Redis" "Stores session data and data protection keys for usage across instances" "GOV.UK PaaS: Key-value pair cache" "Cache" {
                     Tags "Database"
                 }
             }
             
             academiesApiSystem = softwareSystem "Academies API" "Azure: Provides academies data for DfE" "API" {
-                academiesApiApplication = container "Web Application" "Allows the web site to persist and read data relating to an AT project" "Azure App Service: .NET Core MVC 3.1 C# application"
+                academiesApiApplication = container "Azure App Service" "Allows the web site to persist and read data relating to an AT project" "Azure App Service: .NET Core MVC 3.1 C# application"
                 msSqlDatabase = container "Azure SQL DB" "Stores Academies Data" "Relational DB schema" "Azure SQL DB"
             }
         }
@@ -48,7 +57,7 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
         
         deploymentEnvironment "Live" {
             deploymentNode "Amazon Web Services (EU-West-2)" "" "" "Amazon Web Services - Cloud" {
-                deploymentNode "GovPaaS (Cloud Formation)" {
+                deploymentNode "GOV.UK PaaS (Cloud Formation)" {
                     lb = infrastructureNode "Load Balancer" "" "" ""
 
                     wa = deploymentNode "Autoscaling Cloud Formation Instances" "" "" "" {
@@ -61,7 +70,7 @@ workspace "Academy Transfers" "Workspace containing C4 diagrams for AT" {
                 }
             }
             
-            az = deploymentNode "Azure CIP" {
+            az = deploymentNode "Azure DFE T1 Production subscription" {
                 academiesApiInstance = containerInstance academiesApiApplication
             }
 
