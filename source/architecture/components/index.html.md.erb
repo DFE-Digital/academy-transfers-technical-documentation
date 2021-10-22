@@ -9,6 +9,12 @@ owner_slack: "#sdd-devs-and-friends"
 
 # Components
 
+The codebase follows the [Clean Architecture](https://www.freecodecamp.org/news/a-quick-introduction-to-clean-architecture-990c014448d2/), and initially was created with the MVC model of Controllers and Views, but is being updated to use Razor Pages.
+
+The only Gateway in use is the Academies API - referenced here by it's old name 'TRAMS'. We refer to the implementations as Repositories for consistency with C# standard naming conventions.
+
+Within the codebase we have defined a separate library for Word document generation (in [OpenXML format](https://en.wikipedia.org/wiki/Office_Open_XML)), which has potential to be re-used elsewhere where Word document generation is required.
+
 ![Components](images/Components.png)
 
 <%= partial 'partials/links' %>
