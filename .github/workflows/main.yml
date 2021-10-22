@@ -29,6 +29,7 @@ jobs:
           cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AcademyTransfersSystem-SystemContext.png ./source/architecture/context/images/SystemContext.png
           cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AcademyTransfersSystem-Container.png ./source/architecture/containers/images/Containers.png
           cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AmazonWebServicesDeployment.png ./source/architecture/deployment/images/Deployment-Live.png
+          cp ./screenshots/structurizr-${{ secrets.STRUCTURIZR_WORKSPACE_ID }}-AcademyTransfersSystem-WebApplication-Component.png ./source/architecture/components/images/Components.png
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
